@@ -82,6 +82,72 @@ body {
     color: black;
 }
 
+.btn button:first-child {
+    margin-right: 3rem;
+}
+
+.btn button:last-child {
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn button:last-child {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1000;
+}
+
+/* Gradient Border Effect */
+.btn button:last-child::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: var(--border-radius);
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #ffcc00);
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+}
+
+/* Prevents the gradient from covering the button */
+.btn button:last-child::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: black;
+    border-radius: var(--border-radius);
+    z-index: -1;
+}
+
+/* Subtle Rotation Animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* ----------------------------------------- */
 
@@ -271,7 +337,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0.625rem;
+    margin-top: 1.625rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -711,7 +777,7 @@ ul {
 .sos-heading {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .SOS_SOS {
@@ -741,7 +807,7 @@ ul {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     font-weight: 600;
-    /* border: 1 px solid black; */
+    border: 1 px solid black;
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
