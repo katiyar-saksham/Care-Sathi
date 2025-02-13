@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="SOS.css">
+    <title>SOS</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/logo.svg" alt="Care Sathi">
+            </div>
+        </div>
+        <img class="blur left" src="/assets/red_left.png" alt="blur">
+        <img class="blur right" src="/assets/red_right.png" alt="blur">
+        <div class="sos-section">
+            <h1>SOS</h1>
+            <div class="sos-container">
+                <div class="sos-card">
+                    <h2>Get Ambulance</h2>
+                    <label for="phone">Phone Number <span>*</span></label>
+                    <input type="text" id="phone" placeholder="Enter your phone number" required>
+                    <label for="symptoms">Symptoms</label>
+                    <input type="text" id="symptoms" placeholder="Describe symptoms">
+                    <br>
+                    <button class="sos-btn ambulance-btn">Get Ambulance</button>
+                </div>
+
+                <div class="sos-card">
+                    <h2>Get First Aid By AI</h2>
+                    <img src="/assets/first-Aid-Bot.svg" alt="AI First-aid bot">
+                    <br>
+                    <button class="sos-btn firstaid-btn">Get First Aid</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
